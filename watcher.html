@@ -1,0 +1,26 @@
+<script>
+    const getCookie = (name) => {
+        const cookies = document.cookie.split(";").map(cookie => cookie.trim());
+        for (const cookie of cookies) {
+            const [cookieName, cookieValue] = cookie.split("=");
+            if (cookieName === name) {
+                return cookieValue;
+            }
+        }
+        return null;
+    };
+
+    const setCookie = (name, value, days) => {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    };
+
+    const visits = getCookie("counter");
+    const newVisits = visits ? parseInt(visits) + 1 : 1;
+    setCookie("counter", newVisits, 730);
+
+    document.write(`<style>.visitor { color: white; }</style>`);
+    document.write(`<font size=2 class='visitor'>欢迎您，您是第 ${newVisits} 个访问该站点的访客 </font>`);
+</script>
