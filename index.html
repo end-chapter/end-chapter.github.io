@@ -92,6 +92,39 @@ a:hover {
     color: #2a2a2a; /* 与背景颜色相同 */
 }
 </style>
+<script>
+    function updateRunningClock() {
+        var startDate = new Date("2023-04-28T11:56:45Z"); // 替换为你网站的开始日期和时间
+        var currentDate = new Date();
+        var timeDiff = currentDate.getTime() - startDate.getTime();
+
+        var seconds = Math.floor(timeDiff / 1000);
+        var minutes = Math.floor(seconds / 60);
+        var hours = Math.floor(minutes / 60);
+        var days = Math.floor(hours / 24);
+        var months = Math.floor(days / 30.436875); // 平均每月的天数
+        var years = Math.floor(months / 12);
+
+        seconds %= 60;
+        minutes %= 60;
+        hours %= 24;
+        days %= 30.436875;
+        months %= 12;
+
+        var clockText = "";
+        clockText += years + " 年 ";
+        clockText += months + " 月 ";
+        clockText += Math.floor(days) + " 天 ";
+        clockText += hours + " 时 ";
+        clockText += minutes + " 分 ";
+        clockText += seconds + " 秒";
+
+        var clockElement = document.getElementById("running-clock");
+        clockElement.textContent = clockText;
+
+        setTimeout(updateRunningClock, 1000); // 每秒更新一次时钟
+    }
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -108,7 +141,7 @@ a:hover {
 </script>
 
 </head>
-<body>
+<body onload="updateRunningClock()">
 
 <div class="container">
     <h1 class="fade-in">Welcome!</h1>
@@ -137,12 +170,11 @@ a:hover {
     <p class="timestamp fade-in">上次更新时间：北京时间2023年6月13日</p>
     <p class="fade-in">联系我们：caojvrong@outlook.com</p>
 
-    <p class="easter-egg">嘘，你发现了彩蛋！我好像喜欢某人！</p>
-</div>
+    <p class="fade-in">本网站已稳定运行<span id="running-clock"></span></p>
 
-<script>
-    // JavaScript代码可以在此处添加
-</script>
+    <p class="easter-egg">嘘，你发现了彩蛋！我好像喜欢某人！</p>
+    
+</div>
 
 </body>
 </html>
