@@ -21,6 +21,15 @@
     const newVisits = visits ? parseInt(visits) + 1 : 1;
     setCookie("counter", newVisits, 730);
 
-    document.write(`<style>.visitor { color: white; }</style>`);
-    document.write(`<font size=2 class='visitor'>we have ${newVisits} visitors now </font>`);
+    document.write(`<style>.visitor { color: gray; }</style>`);
+    document.write(`<font size=2 class='visitor'>欢迎您，您是第 ${newVisits} 个访问该站点的访客 </font>`);
+    document.write(`<p style="color: gray;">该站点提供了丰富的内容和功能，使您的访问更加有价值和有意义。以下是该站点的主要特点：</p>`);
+    document.write(`<ul>`);
+    document.write(`<li style="color: gray;">详尽的信息：您可以在该站点找到关于各种主题的详细信息和解释。</li>`);
+    document.write(`<li style="color: gray;">交互性和个性化：该站点提供了与访问者互动的功能，根据您的兴趣和需求提供个性化的内容。</li>`);
+    document.write(`<li style="color: gray;">实用工具：您可以在该站点找到各种实用工具和资源，帮助您解决问题和完成任务。</li>`);
+    document.write(`<li style="color: gray;">定期更新：该站点会定期更新内容，以保持信息的准确性和时效性。</li>`);
+    document.write(`</ul>`);
+    document.write(`<p style="color: gray;">感谢您的访问！如果您有任何问题或建议，请随时联系我们。</p>`);
+    document.write(`<p style="color: gray;">我们致力于为您提供最好的访问体验，希望您在本站点找到所需的信息和资源。</p>`);
 </script>
