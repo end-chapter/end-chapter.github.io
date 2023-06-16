@@ -1,244 +1,244 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-	background-color: #2a2a2a;
-	font-family: Arial, sans-serif;
-	color: #666666;
-}
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+body { 
+    background-color: #2a2a2a; 
+    font-family: Arial, sans-serif; 
+    color: #666666; 
+} 
 
-iframe {
-    border: none;
-}
+iframe { 
+    border: none; 
+} 
 
-h1 {
-    color: #666666;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0;
-}
+h1 { 
+    color: #666666; 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin: 10px 0; 
+} 
 
-p {
-    color: #666666;
-    font-size: 14px;
-    margin: 5px 0;
-}
+p { 
+    color: #666666; 
+    font-size: 14px; 
+    margin: 5px 0; 
+} 
 
-a {
-    color: #ffffff; /* 将超链接颜色设置为白色 */
-    text-decoration: none;
-    font-weight: bold; /* 加粗超链接文本 */
-}
+a { 
+    color: blue; /* 将超链接颜色设置为蓝色 */ 
+    text-decoration: none; 
+    font-weight: bold; /* 加粗超链接文本 */ 
+} 
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover { 
+    text-decoration: underline; 
+} 
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
+.container { 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
+} 
 
-.section-divider {
-    margin: 20px 0;
-    border-bottom: 1px solid #666666;
-}
+.section-divider { 
+    margin: 20px 0; 
+    border-bottom: 1px solid #666666; 
+} 
 
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+} 
 
-.embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+.embed-container iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+} 
 
-.timestamp {
-    font-size: 12px;
-    color: #666666;
-}
+.timestamp { 
+    font-size: 12px; 
+    color: #666666; 
+} 
 
-/* 渐渐出现的文字动画 */
-.fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease-in forwards;
-}
+/* 渐渐出现的文字动画 */ 
+.fade-in { 
+    opacity: 0; 
+    animation: fadeInAnimation 1s ease-in forwards; 
+} 
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
 
-/* 调整歌名和2.mp3的布局 */
-.song-info {
-    display: inline-block;
-    margin-right: 10px;
-}
+/* 调整歌名和2.mp3的布局 */ 
+.song-info { 
+    display: inline-block; 
+    margin-right: 10px; 
+} 
 
-/* 彩蛋文本样式 */
-.easter-egg {
-    color: #2a2a2a; /* 与背景颜色相同 */
-}
+/* 彩蛋文本样式 */ 
+.easter-egg { 
+    color: #2a2a2a; /* 与背景颜色相同 */ 
+} 
 
-/* 弹窗样式 */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
+/* 弹窗样式 */ 
+.popup { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 9999; 
+} 
 
-.popup-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
+.popup-content { 
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+} 
 
-.popup-content h2 {
-    margin-top: 0;
-}
+.popup-content h2 { 
+    margin-top: 0; 
+} 
 
-.popup-content ul {
-    list-style-type: none;
-    padding: 0;
-}
+.popup-content ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
 
-.popup-content button {
-    margin-top: 10px;
-}
+.popup-content button { 
+    margin-top: 10px; 
+} 
 
-</style>
-<script>
-    function updateRunningClock() {
-        var startDate = new Date("2023-04-28T11:56:45Z"); // 替换为你网站的开始日期和时间
-        var currentDate = new Date();
-        var timeDiff = currentDate.getTime() - startDate.getTime();
+</style> 
+<script> 
+    function updateRunningClock() { 
+        var startDate = new Date("2023-04-28T11:56:45Z"); // 替换为你网站的开始日期和时间 
+        var currentDate = new Date(); 
+        var timeDiff = currentDate.getTime() - startDate.getTime(); 
 
-        var seconds = Math.floor(timeDiff / 1000);
-        var minutes = Math.floor(seconds / 60);
-        var hours = Math.floor(minutes / 60);
-        var days = Math.floor(hours / 24);
-        var months = Math.floor(days / 30.436875); // 平均每月的天数
-        var years = Math.floor(months / 12);
+        var seconds = Math.floor(timeDiff / 1000); 
+        var minutes = Math.floor(seconds / 60); 
+        var hours = Math.floor(minutes / 60); 
+        var days = Math.floor(hours / 24); 
+        var months = Math.floor(days / 30.436875); // 平均每月的天数 
+        var years = Math.floor(months / 12); 
 
-        seconds %= 60;
-        minutes %= 60;
-        hours %= 24;
-        days %= 30.436875;
-        months %= 12;
+        seconds %= 60; 
+        minutes %= 60; 
+        hours %= 24; 
+        days %= 30.436875; 
+        months %= 12; 
 
-        var clockText = "";
-        clockText += years + " 年 ";
-        clockText += months + " 月 ";
-        clockText += Math.floor(days) + " 天 ";
-        clockText += hours + " 时 ";
-        clockText += minutes + " 分 ";
-        clockText += seconds + " 秒";
+        var clockText = ""; 
+        clockText += years + " 年 "; 
+        clockText += months + " 月 "; 
+        clockText += Math.floor(days) + " 天 "; 
+        clockText += hours + " 时 "; 
+        clockText += minutes + " 分 "; 
+        clockText += seconds + " 秒"; 
 
-        var clockElement = document.getElementById("running-clock");
-        clockElement.textContent = clockText;
+        var clockElement = document.getElementById("running-clock"); 
+        clockElement.textContent = clockText; 
 
-        setTimeout(updateRunningClock, 1000); // 每秒更新一次时钟
-    }
+        setTimeout(updateRunningClock, 1000); // 每秒更新一次时钟 
+    } 
 
-    function showPopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "flex";
-    }
+    function showPopup() { 
+        var popup = document.getElementById("popup"); 
+        popup.style.display = "flex"; 
+    } 
 
-    function hidePopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "none";
-    }
-</script>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Encoding" content="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="HandheldFriendly" content="true">
-<title>神奇小♂网♂站♂</title>
+    function hidePopup() { 
+        var popup = document.getElementById("popup"); 
+        popup.style.display = "none"; 
+    } 
+</script> 
+<meta charset="UTF-8"> 
+<meta http-equiv="Content-Encoding" content="UTF-8"> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> 
+<meta name="HandheldFriendly" content="true"> 
+<title>神奇小♂网♂站♂</title> 
 
-<!-- 添加Google Analytics跟踪代码 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5F7WSENX1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5F7WSENX1E');
-</script>
+<!-- 添加Google Analytics跟踪代码 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5F7WSENX1E"></script> 
+<script> 
+  window.dataLayer = window.dataLayer || []; 
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date()); 
+  gtag('config', 'G-5F7WSENX1E'); 
+</script> 
 
-</head>
-<body onload="updateRunningClock()">
+</head> 
+<body onload="updateRunningClock()"> 
 
-<div class="container">
-    <h1 class="fade-in" onclick="showPopup()">Welcome!</h1>
-    <div class="embed-container">
-        <iframe src="watcher.html"></iframe>
-    </div>
-    <div class="section-divider"></div>
-    <p class="fade-in">————广告区————</p>
-    <p class="fade-in">为不影响用户使用，请有需求的用户点<a href="Ads.html">这里</a>获取信息</p>
-    <div class="section-divider"></div>
-    <p class="fade-in">————深夜Emo区————</p>
-    <div class="embed-container">
-        <embed height="100" width="200" src="2.mp3">
-    </div>
-    <p class="song-info fade-in">
-        <span class="song-name">歌名：《Past Lives》——Slushii</span>
-    </p>
-    <p class="fade-in">“重拾旧爱的感觉将会更加美好”</p>
-    <div class="section-divider"></div>
-    <p class="fade-in">————ChatGPT专区————</p>
-    <a href="share.html" class="fade-in">共享账号</a>
-    <a href="websites.html" class="fade-in">无限制镜像网站</a>
-    <a href="Ads.html" class="fade-in">需要私人账号？</a>
-    <div class="section-divider"></div>
-    <p class="fade-in">这么好的网站确定不收藏吗qwq</p>
-    <p class="timestamp fade-in">上次更新时间：北京时间2023年6月14日</p>
-    <p class="fade-in">联系我们：caojvrong@outlook.com</p>
-	
-    <p class="fade-in">本网站已稳定运行<span id="running-clock"></span></p>
+<div class="container"> 
+    <h1 class="fade-in" onclick="showPopup()">Welcome!</h1> 
+    <div class="embed-container"> 
+        <iframe src="watcher.html"></iframe> 
+    </div> 
+    <div class="section-divider"></div> 
+    <p class="fade-in">————广告区————</p> 
+    <p class="fade-in">为不影响用户使用，请有需求的用户点<a href="Ads.html">这里</a>获取信息</p> 
+    <div class="section-divider"></div> 
+    <p class="fade-in">————深夜Emo区————</p> 
+    <div class="embed-container"> 
+        <embed height="100" width="200" src="2.mp3"> 
+    </div> 
+    <p class="song-info fade-in"> 
+        <span class="song-name">歌名：《Past Lives》——Slushii</span> 
+    </p> 
+    <p class="fade-in">“重拾旧爱的感觉将会更加美好”</p> 
+    <div class="section-divider"></div> 
+    <p class="fade-in">————ChatGPT专区————</p> 
+    <a href="share.html" class="fade-in">共享账号</a> 
+    <a href="websites.html" class="fade-in">无限制镜像网站</a> 
+    <a href="Ads.html" class="fade-in">需要私人账号？</a> 
+    <div class="section-divider"></div> 
+    <p class="fade-in">这么好的网站确定不收藏吗qwq</p> 
+    <p class="timestamp fade-in">上次更新时间：北京时间2023年6月14日</p> 
+    <p class="fade-in">联系我们：caojvrong@outlook.com</p> 
+         
+    <p class="fade-in">本网站已稳定运行<span id="running-clock"></span></p> 
 
-    <p class="easter-egg">嘘，你发现了彩蛋！我好像喜欢某人！</p>
-    
-</div>
+    <p class="easter-egg">嘘，你发现了彩蛋！我好像喜欢某人！</p> 
+     
+</div> 
 
-<!-- 弹窗 -->
-<div class="popup" id="popup">
-    <div class="popup-content">
-        <h2>欢迎</h2>
-        <p>更新日志 - 2023/6/14<br>
-            <ul>
-                <li>· 弹窗更新：对欢迎弹窗进行了修改，现在弹窗内容为每次的更新日志</li>
-                <li>· 修复已知bug：对已知的一些bug进行了修复，提高了网站的稳定性和用户体验。修复这些问题有助于确保网站正常运行并提供更好的用户交互。</li>
-                <li>· 网站整体布局更新:通过调整样式和排版，改进了网站的外观和可读性。这些更新将提供更好的视觉效果和用户界面。</li>
-                <li>· 添加网站运行时间：在页面中添加了一个运行时间的计时器，显示了网站自2023年4月28日开始运行至今的时间。这个功能能够让用户了解网站的运行时长，展示了网站的稳定性和可靠性。</li>
-            </ul>
-        </p>
-        <p>铭桔科技致上 | <a href="https://www.wjx.cn/vm/hQIg97a.aspx">加入我们</a></p>
-        <button onclick="hidePopup()">关闭</button>
-    </div>
-</div>
+<!-- 弹窗 --> 
+<div class="popup" id="popup"> 
+    <div class="popup-content"> 
+        <h2>欢迎</h2> 
+        <p>更新日志 - 2023/6/14<br> 
+            <ul> 
+                <li>· 弹窗更新：对欢迎弹窗进行了修改，现在弹窗内容为每次的更新日志</li> 
+                <li>· 修复已知bug：对已知的一些bug进行了修复，提高了网站的稳定性和用户体验。修复这些问题有助于确保网站正常运行并提供更好的用户交互。</li> 
+                <li>· 网站整体布局更新:通过调整样式和排版，改进了网站的外观和可读性。这些更新将提供更好的视觉效果和用户界面。</li> 
+                <li>· 添加网站运行时间：在页面中添加了一个运行时间的计时器，显示了网站自2023年4月28日开始运行至今的时间。这个功能能够让用户了解网站的运行时长，展示了网站的稳定性和可靠性。</li> 
+            </ul> 
+        </p> 
+        <p>铭桔科技致上 | <a href="https://www.wjx.cn/vm/hQIg97a.aspx">加入我们</a></p> 
+        <button onclick="hidePopup()">关闭</button> 
+    </div> 
+</div> 
 
-</body>
+</body> 
 </html>
